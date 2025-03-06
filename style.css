@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@keyframes hoverEffect {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.hovering {
+    font-size: 50px;
+    text-shadow: 0 0 15px rgba(200, 200, 200, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+    animation: hoverEffect 3s infinite ease-in-out;
+}
 
 body {
     display: flex;
@@ -7,7 +19,7 @@ body {
     height: 100vh;
     background-color: #000;
     color: #fff;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
     text-align: center;
     margin: 0; 
 }
@@ -34,26 +46,26 @@ canvas#matrixCanvas {
 
 h1 {
     font-size: 40px;
-    text-shadow: -20px 10px 40px #fff;
-    margin: 0;
+    color: transparent;
+    text-align: center;
+    background: linear-gradient(45deg, #e6e6e6, #e6e6e6, #e6e6e6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(200, 200, 200, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+    margin: 5;
     opacity: 0;
     transition: opacity 2s ease-in-out;
 }
 
 h1.visible {
     opacity: 1;
-}
-
-h2{
-  font-size: 45px;
-  margin: 3px;
-}
-
+} 
+ 
 hr {
-    height: 1px;
-    background-color: #fff;
+    width:20vh;
+    height:0px;
+    border-bottom: 1px solid rgba(255,255,255,.25);
     margin: 40px 0;
-    width: 20vh;
 }
 
 #loading-text {

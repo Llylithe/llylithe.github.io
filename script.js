@@ -36,9 +36,9 @@ window.onload = function () {
   }
 
   function updateTitle() {
-    const dots = [".", "..", "..."];
+    const dots = ["", ".", "..", "..."];
     titleText.innerText = dots[period];
-    period = (period + 1) % 3;
+    period = (period + 1) % 4;
   }
 
   function typeText() {
@@ -54,8 +54,8 @@ window.onload = function () {
     loadingText.classList.add("visible");
   }, 100);
 
-  setTimeout(typeText, 500);
-  setTimeout(updateLoading, 600);
+  setTimeout(typeText, 350);
+  setTimeout(updateLoading, 200);
   setInterval(updateTitle, 350);
 };
 
