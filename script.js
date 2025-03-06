@@ -30,7 +30,7 @@ window.onload = function () {
       setTimeout(updateLoading, loadingSpeed);
     } else {
       setTimeout(() => {
-        window.location.href = "home.html";
+        window.location.href = "homepage/home.html";
       }, 500);
     }
   }
