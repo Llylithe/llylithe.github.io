@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    background-color: #000;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 30px;
+  color: #fff;
+}
+
