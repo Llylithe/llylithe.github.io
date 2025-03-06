@@ -4,10 +4,12 @@ window.onload = function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  // refer to https://github.com/jcubic/cmatrix
+
   matrix(canvas, {
     chars: ['0', '1'],       // You can customize this for different characters
     font_size: 20,            // Adjust the font size of the characters
-    color: '#070707'          // Set the matrix characters' color (green in this case)
+    color: '#090909'          // Set the matrix characters' color (green in this case)
   });
 
   let percentage = 0;
@@ -30,10 +32,10 @@ window.onload = function () {
       setTimeout(updateLoading, loadingSpeed);
     } else {
       setTimeout(() => {
-        document.body.classList.add("fade-out"); // Apply zoom-in fade effect
+        document.body.classList.add("fade-out");
         setTimeout(() => {
           window.location.href = "homepage/home.html";
-        }, 1500); // Wait for animation to finish
+        }, 1500);
       }, 500);
     }
   }
