@@ -30,10 +30,17 @@ window.onload = function () {
       setTimeout(updateLoading, loadingSpeed);
     } else {
       setTimeout(() => {
-        window.location.href = "homepage/home.html";
+        document.body.classList.add("fade-out"); // Apply zoom-in fade effect
+        setTimeout(() => {
+          window.location.href = "homepage/home.html";
+        }, 1500); // Wait for animation to finish
       }, 500);
     }
   }
+
+
+
+
 
   function updateTitle() {
     const dots = ["", ".", "..", "..."];
