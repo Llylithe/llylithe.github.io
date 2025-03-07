@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purgatory</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
 
+    <div class="container">
+        <h1 class="hovering"> WELCOME TO LLYLITHE'S WORLD</h1>
+        <hr class="elongating">
+    </div>
+    <audio id="bg-music" src="winterNights.mp3" preload="auto" loop></audio>
+    <script>
+        document.addEventListener("click", function playMusic() {
+            const audio = document.getElementById("bg-music");
+            audio.play();
+            document.removeEventListener("click", playMusic);
+        });
+    </script>
+</body>
+</html>
