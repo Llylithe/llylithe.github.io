@@ -9,7 +9,7 @@ window.onload = function () {
   matrix(canvas, {
     chars: ['0', '1'],       // You can customize this for different characters
     font_size: 20,            // Adjust the font size of the characters
-    color: '#333333'          // Set the matrix characters' color (green in this case)
+    color: '#070707'          // Set the matrix characters' color (green in this case)
   });
 
   let percentage = 0;
