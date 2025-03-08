@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purgatory</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <canvas id="matrixCanvas"></canvas>
     <div class="container">
         <h1 class="hovering"> TOUCH ME ANYWHERE :3</h1>
-        <hr class="elongating">
+        <div class="hr-container">
+            <hr class="elongating">
+        </div>
+        
+        <div class="button-container">
+            <div class="box">ABOUT ME</div>
+            <div class="box">CONTACT</div>
+            <div class="box">PROJECTS</div>
+            <div class="lockedbox">LOCKED</div>
+        </div>
     </div>
+    <div>
+        <h2></h2>
+    </div>
+
     <audio id="bg-music" src="winterNights.mp3" preload="auto" loop></audio>
     <script>
         document.addEventListener("click", function playMusic() {
@@ -20,5 +33,8 @@
             document.removeEventListener("click", playMusic);
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/cmatrix"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
