@@ -9,21 +9,40 @@
 <body>
     <canvas id="matrixCanvas"></canvas>
     <div class="container">
-        <h1 class="hovering"> TOUCH ME ANYWHERE :3</h1>
+        <h1 class="hovering">WELCOME TO PURGATORY</h1>
         <div class="hr-container">
             <hr class="elongating">
         </div>
-        
+      <!-- yoo u found me!  -->       
         <div class="button-container">
             <div class="box">ABOUT ME</div>
             <div class="box">CONTACT</div>
             <div class="box">PROJECTS</div>
-            <div class="lockedbox">LOCKED</div>
+            <div class="lockedbox" onclick="showPopup()">ENTER VALHALLA?</div>
+<!-- hmm i wonder who made this... -->
+
         </div>
     </div>
+
     <div>
         <h2></h2>
     </div>
+
+  <div class="popup" id="keyPopup">
+    <div class="popup-content">
+        <h3>ENTER VALHALLA?</h3>
+        <p>Flags will be formatted like VALH4LLA{th1s_i5_4_s4mpl3_fl4g}, they'll be hidden around my website. Good luck!</p>
+        <p>I'd <i>inspect</i> this page carefully to find a hint for the first flag... </p>
+        <input type="text" id="flagInput" placeholder="Enter flag">
+        <div>
+<!-- do they not have anything better to do?  -->
+
+
+        <button onclick="checkKey()">Submit</button>
+        <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+</div>
 
     <audio id="bg-music" src="winterNights.mp3" preload="auto" loop></audio>
     <script>
