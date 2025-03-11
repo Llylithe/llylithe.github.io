@@ -23,11 +23,11 @@ window.onload = function () {
   let textIndex = 0;
 
   const typingSpeed = 30;
-  const loadingSpeed = 50;
+  const loadingSpeed = 40;  // Faster speed for loading (higher number means faster)
 
   function updateLoading() {
     if (percentage < 100) {
-      percentage += 1;
+      percentage += 2; // Increase by 2% per step (this speeds it up)
       loadingText.innerText = percentage + "%";
       setTimeout(updateLoading, loadingSpeed);
     } else {
@@ -35,14 +35,10 @@ window.onload = function () {
         document.body.classList.add("fade-out");
         setTimeout(() => {
           window.location.href = "homepage/home.html";
-        }, 1500);
+        }, 500);
       }, 500);
     }
   }
-
-
-
-
 
   function updateTitle() {
     const dots = ["", ".", "..", "..."];
@@ -64,8 +60,7 @@ window.onload = function () {
   }, 100);
 
   setTimeout(typeText, 350);
-  setTimeout(updateLoading, 200);
+  setTimeout(updateLoading, 200); // Start loading after 200ms
   setInterval(updateTitle, 350);
 };
-
 
