@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@latest/patched-fonts/JetBrainsMono/Regular/JetBrainsMonoNerdFont-Regular.ttf');
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes kaChow {
+    0%   { transform: translateY(0px) translateX(0px) scaleX(1) scaleY(0.7) rotate(0deg); }
+    25%  { transform: translateY(40px) translateX(30px) scaleX(0.9) scaleY(1.1) rotate(5deg); }
+    50%  { transform: translateY(80px) translateX(60px) scaleX(1.1) scaleY(1.3) rotate(-5deg); }
+    75%  { transform: translateY(40px) translateX(120px) scaleX(1.2) scaleY(0.8) rotate(10deg); }
+    100% { transform: translateY(0px) translateX(0px) scaleX(1) scaleY(0.7) rotate(0deg); }
+}
+
+@keyframes glowPulse {
+    0%   { filter: blur(40px) opacity(0.4); }
+    50%  { filter: blur(90px) opacity(0.8); }
+    100% { filter: blur(40px) opacity(0.4); }
+}
+
+@keyframes colorMelt {
+    0%   { 
+        color: #82a7cf; /* Soft Sky Blue */
+        text-shadow: 0 0 30px rgba(130, 167, 207, 0.7), 
+                     0 0 80px rgba(130, 167, 207, 0.5), 
+                     0 0 150px rgba(130, 167, 207, 0.3); 
+    }
+    50%  { 
+        color: #7e9c9e; /* Muted Teal */
+        text-shadow: 0 0 30px rgba(126, 156, 158, 0.7), 
+                     0 0 80px rgba(126, 156, 158, 0.5), 
+                     0 0 150px rgba(126, 156, 158, 0.3); 
+    }
+    100% { 
+        color: #82a7cf; /* Soft Sky Blue */
+        text-shadow: 0 0 30px rgba(130, 167, 207, 0.7), 
+                     0 0 80px rgba(130, 167, 207, 0.5), 
+                     0 0 150px rgba(130, 167, 207, 0.3); 
+    }
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  animation: fadeIn 0.5s ease-in forwards;
+  text-shadow: 0 0 15px rgba(200, 200, 200, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 5vh;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  width: 5%;
+} 
+
+h1 {
+  font-family: 'JetBrainsMono', monospace;
+  font-size: 80px;
+  color: #aeb3b8;
+  text-align: left;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(66, 85, 102, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+
+}
+
+.button-container {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2vh;
+  display: flex;
+  position: absolute;
+  top: 3vh;
+  left: 5vh;
+}
+
+.box {
+  margin-top: 0;
+  font-family: 'JetBrainsMono', monospace;
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(135deg, #090909, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #aeb3b8;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.7s ease;
+  border: 1px solid #a3a3a3;
+  box-shadow: 0px
+}
+
+h2::before {
+    content: "★";
+    position: absolute;
+    align-items: right;
+    justify-content: center;
+    top: 15%;
+    right: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 500px;
+    color: red;
+    text-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 
+                 0 0 80px rgba(255, 0, 0, 0.5), 
+                 0 0 150px rgba(255, 0, 0, 0.3);
+    z-index: -1;
+    filter: blur(30px);
+    pointer-events: none;
+    animation: kaChow 5s infinite cubic-bezier(0.42, 0, 0.58, 1), 
+               glowPulse 3s infinite ease-in-out,
+               colorMelt 6s infinite linear;
+}
+
