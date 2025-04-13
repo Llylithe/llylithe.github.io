@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     element.addEventListener('mouseenter', startEffect); // Run on hover
   }
 
-  randomLetterReveal('about-me', 'ABOUT ME:', 50, 60);
+  randomLetterReveal('about-me', 'ABOUTME {', 50, 60);
 });
 
 

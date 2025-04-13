@@ -130,3 +130,15 @@ h2::before {
                colorMelt 6s infinite linear;
 }
 
+.intro-container {
+  width: 900px;
+  color: #aeb3b8;
+  border-left: 1px solid #fff;
+  padding-left: 50px;
+  margin-right: 550px;
+  margin-top: 50px;
+  font-family: 'JetBrainsMono', monospace;
+  line-height: 1.6;
+  text-shadow: 0 0 0px;
+}
+
